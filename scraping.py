@@ -17,7 +17,7 @@ def only_japanese(doc):
 
 #2,4,5だけ
 def make_text_from_html(word_difficulty,page_list):
-    with open(word_difficulty+".txt","w",encoding="utf-8") as f:
+    with open("text/"+word_difficulty+".txt","w",encoding="utf-8") as f:
         counter = 0
         for p in page_list:
             counter += 1

@@ -14,19 +14,21 @@ def only_japanese(doc):
     return True
 
 #アルファベット抜きの単語帳
-def make_text_from_html(word_difficulty,number_of_pages,first_page_query):
+def make_text_from_html(word_difficulty,page_list):
     with open(word_difficulty+".txt","w",encoding="utf-8") as f:
-        for i in range(number_of_pages):
-            PAGE_URL = "http://www.e-japanese.jp/?p={0}".format(first_page_query+i*3)
+        counter = 0
+        for p in page_list:
+            counter += 1
+            PAGE_URL = "http://www.e-japanese.jp/?p={0}".format(p)
             html_doc = requests.get(PAGE_URL).text
             soup = BeautifulSoup(html_doc,"html.parser")
             for link in soup.find_all("td")[2::4]:
                 txt = link.get_text()
                 if only_japanese(txt.strip()):
                     f.write(txt+"\n")
-            print(word_difficulty+" : {0}/{1}".format(i+1,number_of_pages))
+            print(word_difficulty+" : {0}/{1}".format(counter,len(page_list)))
             time.sleep(0.5)
     print("="*10)
 
-make_text_from_html("N5",5,1005)
-make_text_from_html("N4",5,990)
+make_text_from_html("N5",[1005+i*3 for i in range(5)])
+make_text_from_html("N4",[990+i*3 for i in range(5)])

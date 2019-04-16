@@ -1,16 +1,16 @@
 /*全体の背景*/
 
 body{
-	background-color: #fff;
-	height: 900px;
+    background-color: #fff;
+    height: 900px;
 }
 /*---------------------------*/
 
 
 /*上の青い部分(ナビゲーションバー)*/
 .navigation{
-	background-color: #0066cc;
-	height: 35px; 
+    background-color: #0066cc;
+    height: 35px; 
 }
 
 /*---------------------------*/
@@ -18,7 +18,7 @@ body{
 
 /*文字を真ん中に移動するcss*/
 .kantan p{
-	text-align: center;
+    text-align: center;
 }
 
 /*-------------------------*/
@@ -28,14 +28,14 @@ body{
 
 /*検索窓周辺の枠のcss*/
 .box1{
-	padding: 0.5em 1em;
-	margin: auto;
-	font-weight: bold;
-	background: #1872cc;
-	height: 600px;
-	max-width:1200px;
-	min-width: 200px; 
-	border-radius: 10px;
+    padding: 0.5em 1em;
+    margin: auto;
+    font-weight: bold;
+    background: #1872cc;
+    height: 600px;
+    max-width:1200px;
+    min-width: 200px; 
+    border-radius: 10px;
 }
 
 .box1 p {
@@ -64,18 +64,18 @@ text-align: center;
 
 
 #sbtn{
-	width: 200px;
-	height: 80px;
-	border-radius: 10px;
-	background-color: #a3b8cc;
-	border: none;
-	font-size: 25px;
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #a3b8cc;
+    border: none;
+    font-size: 25px;
 }
 
 div{text-align: center;}
 
 #sbtn:hover{
-	color: #000099;
+    color: #000099;
 }
 
 /*-----------ここまで-------------*/
@@ -86,14 +86,14 @@ div{text-align: center;}
 /*検索結果を表示する枠のcss*/
 
 .box2{
-	padding: 0.5em 1em;
-	margin: auto;
-	font-weight: bold;
-	background: #fff;
-	height: 550px;
-	max-width: 1000px;
-	min-width: 150px;
-	border-radius: 10px;
+    padding: 0.5em 1em;
+    margin: auto;
+    font-weight: bold;
+    background: #fff;
+    height: 550px;
+    max-width: 1000px;
+    min-width: 150px;
+    border-radius: 10px;
 }
 
 

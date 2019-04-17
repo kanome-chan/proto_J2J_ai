@@ -31,7 +31,7 @@ def odd_even():
         try:
             target = request.form["input_word"]
             print(target)
-            sim = model.most_similar(positive=[target],topn=300)
+            sim = model.most_similar(positive=[target],topn=1000)
             sim2 = [_[0] for _ in sim]
             for n_list in difficulty_list:
                 for near_word in sim2:

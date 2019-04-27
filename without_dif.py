@@ -1,6 +1,7 @@
 from flask import*
 import gensim
 import pickle
+import sys
 
 app = Flask(__name__)
 #読み込みにめっちゃ時間かかる
@@ -9,6 +10,7 @@ try:
     model = gensim.models.KeyedVectors.load_word2vec_format("F:/vector/model.vec", binary=False)
 except FileNotFoundError:
     print("SSDセットした？")
+    sys.exit()
 print("完了")
 
 

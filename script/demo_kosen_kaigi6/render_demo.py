@@ -50,6 +50,6 @@ def render_j2j():
             return render_template("demo_2.html",words=words_dic)
         except:
             return render_template("demo_error.html")
-    
+
 if __name__ == "__main__":
     app.run()
